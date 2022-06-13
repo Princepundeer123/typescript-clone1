@@ -10,7 +10,7 @@ function AssignmentSubmition() {
       <h1 className="text-xl font-semibold pr-5">Submission Link</h1>
 			<input className="p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2  focus:ring-offset-2 focus:ring-yellow-500" type="text" placeholder="Submission Link"/>
       </div>
-			<Button>Submit</Button>
+			<button >Submit</button>
 		</div>
 	);
 }

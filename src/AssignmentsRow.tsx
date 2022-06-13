@@ -1,13 +1,22 @@
-import AssignmentSubmition from './AssignmentSubmition';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { DateTime } from 'luxon';
+import AssignmentSubmition from './AssignmentSubmition';
+import { useParams, useNavigate } from 'react-router-dom';
 
-const AssignmentsRow = ({ assignment }: any) => {
+function AssignmentsRow({ assignment }: any) {
+	const data = useParams();
 	const [showPopup, submitShowPopup] = useState(false);
 
 	const navigate = useNavigate();
 
+	// const submitAsignment = () => {
+	// axios.put(
+	// 	`https;//api.codeyogi.io/${assignment.id}/submit`,
+	// 	{ submissionLink },
+	// 	{ withCredentials: true }
+	//  console.log('data')
+	// );
+	// 	};
 
 	const humanReadable = DateTime.fromISO(assignment.created_at).toLocaleString(DateTime.DATE_FULL);
 
