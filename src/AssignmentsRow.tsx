@@ -9,14 +9,6 @@ function AssignmentsRow({ assignment }: any) {
 
 	const navigate = useNavigate();
 
-	// const submitAsignment = () => {
-	// axios.put(
-	// 	`https;//api.codeyogi.io/${assignment.id}/submit`,
-	// 	{ submissionLink },
-	// 	{ withCredentials: true }
-	//  console.log('data')
-	// );
-	// 	};
 
 	const humanReadable = DateTime.fromISO(assignment.created_at).toLocaleString(DateTime.DATE_FULL);
 
