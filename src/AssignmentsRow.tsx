@@ -1,9 +1,12 @@
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import { DateTime } from 'luxon';
 import AssignmentSubmition from './AssignmentSubmition';
 import { useParams, useNavigate } from 'react-router-dom';
+import { Assignment } from './modules/assignment';
 
-function AssignmentsRow({ assignment }: any) {
+type AssignmentProps = { assignment: Assignment}
+
+const  AssignmentsRow: FC<AssignmentProps> = ({ assignment }) => {
 	const data = useParams();
 	const [showPopup, submitShowPopup] = useState(false);
 

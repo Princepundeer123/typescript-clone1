@@ -1,8 +1,11 @@
 import MDEditor from '@uiw/react-md-editor';
 import { DateTime } from 'luxon';
+import { FC } from 'react';
+import { Lecture } from './modules/lecture';
 
+type LectureProps = { lecture: Lecture };
 
-function LecturesRow({ lecture }: any) {
+const  LecturesRow: FC<LectureProps> = ({ lecture }) => {
 
 	return (
 		<div className='pl-60'>

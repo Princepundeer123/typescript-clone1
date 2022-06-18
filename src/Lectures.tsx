@@ -1,17 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { getLectures } from './Api';
 import LecturesRow from './LecturesRow';
+import { Lecture } from './modules/lecture';
 
-function Lectures() {
+
+const Lectures: FC<Lecture[]> = () => {
 	
-	const [lectures, setLectures] = useState([]);
+	const [lectures, setLectures] = useState<Lecture[]>([]);
 
 	useEffect(() => {
 		const token = getLectures();
 
 		token.then(prop => {
-			const lecturesData = prop.data;
-			setLectures(lecturesData);
+			setLectures(prop.data);
 		});
 	}, []);
 

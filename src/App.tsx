@@ -1,12 +1,13 @@
-import { useState } from 'react';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import Path from './Path';
 
 function App() {
   const [count, setCount] = useState(0)
-
+ 
   return (
     <div>
-     <Path/> 
+    <Path/>
      </div>
   )
 }
